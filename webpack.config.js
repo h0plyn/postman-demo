@@ -1,19 +1,27 @@
+const { resolve } = require('path');
+
 module.exports = {
-  entry: './client/index.js',
-  mode: 'development',
+  entry: ['babel-polyfill', './client/index.js'],
   output: {
     path: __dirname,
     filename: './public/bundle.js',
   },
-  // devtools: 'source-maps',
+  mode: 'development',
+  context: __dirname,
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /jsx?$/,
+        include: resolve(__dirname, './client'),
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
