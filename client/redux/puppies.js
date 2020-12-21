@@ -6,5 +6,7 @@ export default function puppiesReducer(state = {}, action) {
   switch (action.type) {
     case GET_PUPPIES:
       return action.puppies;
+    default:
+      return state;
   }
 }
