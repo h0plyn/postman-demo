@@ -1,4 +1,5 @@
 DS_Store
 node_modules
-bundle.ks
+bundle.js
 bundle.js.map
+bundle.js.LICENSE.txt
