@@ -1,65 +1,94 @@
-const { db, Puppies, Users } = require('./server/db');
+const { db, Product, User, Brand } = require('./server/db');
 const faker = require('faker');
 
 // Development Dummy Data
-const robots = [
+const products = [
   {
-    name: 'Falcon 9',
+    name: 'MacbookPro',
   },
   {
-    name: 'Falcon Heavy',
+    name: 'Recon Fly Rod',
   },
   {
-    name: 'Dragon',
+    name: 'Eames Lounge and Ottoman',
   },
   {
-    name: 'Starship',
+    name: 'Coffee Beans',
   },
 ];
 
-const projects = [
+const brands = [
   {
-    name: 'Rideshare Program',
+    name: 'Apple',
   },
 
   {
-    name: 'Human Spaceflight',
+    name: 'Orvis',
+  },
+  {
+    name: 'Herman Miller',
+  },
+  {
+    name: 'Blue Bottle',
+  },
+];
+
+const users = [
+  {
+    name: 'Ricky',
   },
 
   {
-    name: 'Starlink Launch',
+    name: 'Garrett',
+  },
+  {
+    name: 'Kaitlin',
+  },
+  {
+    name: 'Kylie',
   },
 ];
 
 const seed = async () => {
   try {
-    await db.sync({ force: true });
+    await db.sync();
 
     await Promise.all(
-      robots.map((robot) => {
-        return Users.create(robot);
+      products.map((product) => {
+        return Product.create(product);
       })
     );
 
     await Promise.all(
-      projects.map((project) => {
-        return Puppies.create(project);
+      brands.map((brand) => {
+        return Brand.create(brand);
+      })
+    );
+
+    await Promise.all(
+      users.map((user) => {
+        return User.create(user);
       })
     );
 
     // Development Dummy Data
-    const falcon = await Users.findByPk(1);
-    const falconHeavy = await Users.findByPk(2);
-    const dragon = await Users.findByPk(3);
-    const starship = await Users.findByPk(4);
+    const macbook = await Product.findByPk(1);
+    const flyrod = await Product.findByPk(2);
+    const eames = await Product.findByPk(3);
+    const coffee = await Product.findByPk(4);
 
-    const humanSpaceflight = await Puppies.findByPk(2);
-    const cargoLaunch = await Puppies.findByPk(3);
-    const rideshare = await Puppies.findByPk(1);
+    const apple = await Brand.findByPk(1);
+    const orvis = await Brand.findByPk(2);
+    const hermanMiller = await Brand.findByPk(3);
+    const blueBottle = await Brand.findByPk(4);
 
-    await humanSpaceflight.setUser(dragon);
-    await cargoLaunch.setUser(starship);
-    await dragon.addPuppies([rideshare]);
+    const currentBrand = await Brand.findByPk(1);
+    console.log(Object.keys(currentBrand.__proto__));
+
+    await apple.addProduct(macbook);
+    await orvis.addProduct(flyrod);
+    await hermanMiller.addProduct(eames);
+    await blueBottle.addProduct(coffee);
   } catch (err) {
     console.log(err);
   }
