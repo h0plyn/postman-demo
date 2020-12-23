@@ -26,8 +26,4 @@ app.use((err, req, res, next) => {
   res.status(500);
 });
 
-const PORT = 1337;
-
-app.listen(PORT, () => {
-  console.log(`Boilermaker Server is listening on ${PORT}`);
-});
+module.exports = app

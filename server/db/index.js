@@ -1,6 +1,6 @@
 const db = require('./db');
 const Kittens = require('./kittens');
-const Puppies = requre('./puppies');
+const Puppies = require('./puppies');
 const Users = require('./users');
 
 Users.hasMany(Puppies);

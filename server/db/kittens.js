@@ -6,7 +6,7 @@ const Kittens = db.define('kittens', {
     type: Sequelize.STRING,
   },
   age: {
-    type: Sequelize.NUMBER,
+    type: Sequelize.INTEGER,
   },
 });
 
