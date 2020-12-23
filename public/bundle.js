@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello Stanley");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello User");
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
@@ -106,42 +106,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _puppies__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./puppies */ "./client/redux/puppies.js");
+/* harmony import */ var _products__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./products */ "./client/redux/products.js");
 
 
 var reducer = (0,redux__WEBPACK_IMPORTED_MODULE_1__.combineReducers)({
-  puppies: _puppies__WEBPACK_IMPORTED_MODULE_0__.default
+  products: _products__WEBPACK_IMPORTED_MODULE_0__.default
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);
 
 /***/ }),
 
-/***/ "./client/redux/puppies.js":
-/*!*********************************!*\
-  !*** ./client/redux/puppies.js ***!
-  \*********************************/
+/***/ "./client/redux/products.js":
+/*!**********************************!*\
+  !*** ./client/redux/products.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getPuppies": () => /* binding */ getPuppies,
-/* harmony export */   "default": () => /* binding */ puppiesReducer
+/* harmony export */   "getProducts": () => /* binding */ getProducts,
+/* harmony export */   "default": () => /* binding */ productsReducer
 /* harmony export */ });
-var GET_PUPPIES = 'GET_PUPPIES';
-var getPuppies = function getPuppies(dogs) {
+var GET_PRODUCTS = 'GET_PRODUCTS';
+var getProducts = function getProducts(dogs) {
   return {
-    type: GET_PUPPIES,
-    puppies: puppies
+    type: GET_PRODUCTS,
+    products: products
   };
 };
-function puppiesReducer() {
+function productsReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case GET_PUPPIES:
-      return action.puppies;
+    case GET_PRODUCTS:
+      return action.products;
 
     default:
       return state;

@@ -1,10 +1,10 @@
 const router = require('express').Router();
 
-// Mounted on /api/puppies
+// Mounted on /api/brands
 
-// GET mounted on /api/puppies
+// GET /api/brands
 router.get('/', (req, res, next) => {
-  res.send("You've reached Puppies!");
+  res.send("You've reached Brands!");
 });
 
 module.exports = router;
