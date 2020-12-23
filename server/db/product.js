@@ -1,16 +1,13 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
 
-const Puppies = db.define('puppies', {
+const Product = db.define('product', {
   name: {
     type: Sequelize.STRING,
   },
-  age: {
-    type: Sequelize.STRING,
-  },
-  breed: {
+  category: {
     type: Sequelize.STRING,
   },
 });
 
-module.exports = Puppies;
+module.exports = Product;

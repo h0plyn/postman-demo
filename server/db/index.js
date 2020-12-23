@@ -1,17 +1,11 @@
 const db = require('./db');
-const Kittens = require('./kittens');
-const Puppies = require('./puppies');
-const Users = require('./users');
-
-Users.hasMany(Puppies);
-Puppies.belongsTo(Users);
-
-Users.hasMany(Kittens);
-Kittens.belongsTo(Users);
+const Brand = require('./brand');
+const Product = require('./product');
+const User = require('./user');
 
 module.exports = {
   db,
-  Users,
-  Kittens,
-  Puppies,
+  User,
+  Brand,
+  Product,
 };

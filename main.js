@@ -6,6 +6,6 @@ db.sync().then(() => {
   console.log('db synced');
 
   app.listen(PORT, () => {
-    console.log(`Serving up Users, Pups, n Kits from PORT ${PORT}`);
+    console.log(`Serving up an eComm app from PORT ${PORT}`);
   });
 });

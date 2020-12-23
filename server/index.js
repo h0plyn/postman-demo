@@ -26,4 +26,4 @@ app.use((err, req, res, next) => {
   res.status(500);
 });
 
-module.exports = app
+module.exports = app;
