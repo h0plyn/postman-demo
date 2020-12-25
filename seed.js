@@ -83,7 +83,7 @@ const seed = async () => {
     const blueBottle = await Brand.findByPk(4);
 
     const currentBrand = await Brand.findByPk(1);
-    console.log(Object.keys(currentBrand.__proto__));
+    // console.log(Object.keys(currentBrand.__proto__));
 
     await apple.addProduct(macbook);
     await orvis.addProduct(flyrod);
