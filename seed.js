@@ -1,19 +1,24 @@
 const { db, Product, User, Brand } = require('./server/db');
 const faker = require('faker');
+const bcrypt = require('bcrypt');
 
 // Development Dummy Data
 const products = [
   {
     name: 'MacbookPro',
+    category: 'electronics',
   },
   {
     name: 'Recon Fly Rod',
+    category: 'recreation',
   },
   {
     name: 'Eames Lounge and Ottoman',
+    category: 'home goods',
   },
   {
     name: 'Coffee Beans',
+    category: 'food',
   },
 ];
 
@@ -36,16 +41,24 @@ const brands = [
 const users = [
   {
     name: 'Ricky',
+    email: 'ricky@rickyrhodes.com',
+    password: '123',
   },
 
   {
     name: 'Garrett',
+    email: 'garrett@gmail.com',
+    password: '123',
   },
   {
     name: 'Kaitlin',
+    email: 'kaitlin@gmail.com',
+    password: '123',
   },
   {
     name: 'Kylie',
+    email: 'kylie@gmail.com',
+    password: '123',
   },
 ];
 

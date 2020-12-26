@@ -7,7 +7,7 @@ const dbStore = new SequelizeStore({ db: db });
 const path = require('path');
 const apiRoutes = require('./api');
 const passport = require('passport');
-const authRoutes = require('./auth/oauth');
+const authRoutes = require('./auth');
 require('../secret');
 
 const volleyball = require('volleyball');
