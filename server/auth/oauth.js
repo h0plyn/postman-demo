@@ -6,7 +6,6 @@ require('../../secret');
 passport.serializeUser((user, done) => {
   console.log('Serialized');
   console.log(user);
-  // Check user ID?
   done(null, user.id);
 });
 

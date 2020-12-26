@@ -7,9 +7,29 @@ const { authenticate } = require('passport');
 // Mounted on /auth
 
 // router.use('/oauth', oauthRouter);
-// router.use('/', (req, res, next) => {
-//   res.send("You've landed on auth");
-// });
+
+// GET /auth/me
+router.get('/me', async (req, res, next) => {
+  try {
+    if (!req.session.userId) {
+      if (req.user) {
+        console.log('req.user--->', req.user);
+        res.json(req.user);
+      } else {
+        res.sendStatus(401);
+      }
+    } else {
+      const user = await User.findByPk(req.session.userId);
+      if (!user) {
+        res.sendStatus(401);
+      } else {
+        res.json(user);
+      }
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
 // POST /auth/signup
 router.post('/signup', async (req, res, next) => {
@@ -60,11 +80,12 @@ router.put('/login', async (req, res, next) => {
     next(err);
   }
 });
-Gamepad
+
 // DELETE /auth/logout
-router.delete('logout', (req, res, next) => {
+router.delete('/logout', (req, res, next) => {
+  console.log('DESTROYING SESSION->', req.session.userId);
   req.logout();
-  delete req.session.userId;
+  req.session.destroy();
   res.sendStatus(204);
 });
 

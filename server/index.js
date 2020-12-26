@@ -18,6 +18,7 @@ dbStore.sync();
 app.use(
   session({
     secret: process.env.SESSION_SECRET || 'beaverCr33kSt33l',
+    store: dbStore,
     resave: false,
     saveUninitialized: false,
   })
