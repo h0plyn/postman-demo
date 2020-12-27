@@ -1,6 +1,4 @@
 const { db, Product, User, Brand } = require('./server/db');
-const faker = require('faker');
-const bcrypt = require('bcrypt');
 
 // Development Dummy Data
 const products = [

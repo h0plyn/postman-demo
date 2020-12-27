@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const oauthRouter = require('./oauth');
+const googleRouter = require('./google');
 const { User } = require('../db');
 const bcrypt = require('bcrypt');
-const { authenticate } = require('passport');
 
 // Mounted on /auth
 
-// router.use('/oauth', oauthRouter);
+router.use('/oauth', oauthRouter);
+router.use('/google', googleRouter);
 
 // GET /auth/me
 router.get('/me', async (req, res, next) => {

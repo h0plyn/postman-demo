@@ -1,7 +1,13 @@
 import React from 'react';
+import GoogleLogin from './GoogleLogin';
 
 const Home = (props) => {
-  return <h1>Hello User</h1>;
+  return (
+    <div>
+      <h1>Boilermaker</h1>
+      <GoogleLogin />
+    </div>
+  );
 };
 
 export default Home;

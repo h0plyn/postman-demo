@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
 const User = require('./../db/user');
-require('../../secret');
 
 passport.serializeUser((user, done) => {
   console.log('Serialized');
