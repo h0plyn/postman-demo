@@ -8,7 +8,9 @@ const path = require('path');
 const apiRoutes = require('./api');
 const passport = require('passport');
 const authRoutes = require('./auth');
-require('../secret');
+if (process.env.NODE_ENV === 'development') {
+  require('./secret');
+}
 
 const volleyball = require('volleyball');
 app.use(volleyball);

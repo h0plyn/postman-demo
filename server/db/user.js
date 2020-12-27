@@ -11,6 +11,9 @@ const User = db.define('user', {
   password: {
     type: Sequelize.STRING,
   },
+  google_id: {
+    type: Sequelize.STRING,
+  },
 });
 
 module.exports = User;
