@@ -1,9 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
-const GoogleLogin = (props) => {
-  console.log('props', props);
-  return <Link to="/auth/google">Login with Google</Link>;
-};
+class GoogleLogin extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    return <Redirect to="/auth/google" />;
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Login with Google</button>;
+  }
+}
 
 export default GoogleLogin;
