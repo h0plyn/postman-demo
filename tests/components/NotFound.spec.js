@@ -1,8 +1,19 @@
-const assert = require('chai').assert;
-const NotFound = require('../../client/components/NotFound');
+import React from 'react';
+import { expect, assert } from 'chai';
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import NotFound from '../../client/components/NotFound';
+
+configure({ adapter: new Adapter() });
 
 describe('NotFound', () => {
-  it('app should return Page not found.', () => {
-    assert.equal(NotFound(), 'Page not found.');
+  const wrapper = shallow(<NotFound />);
+
+  it('should render an h1', () => {
+    expect(wrapper.find('h1')).to.have.length(1);
+  });
+
+  it('should print Page not found.', () => {
+    expect(wrapper.find('h1').text()).to.equal('Page not found.');
   });
 });
