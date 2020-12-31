@@ -8,10 +8,14 @@ import GoogleLogin from '../../client/components/GoogleLogin';
 configure({ adapter: new Adapter() });
 
 describe('Home', () => {
-  const wrapper = shallow(<Home />);
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Home />);
+  });
 
   it('renders a div', () => {
-    expect(wrapper.find('div')).to.have.length(1);
+    expect(wrapper.find('div')).to.have.length(2);
   });
 
   it('renders an h1', () => {
@@ -24,5 +28,17 @@ describe('Home', () => {
 
   it('renders a GoogleLogin component', () => {
     expect(wrapper.find(GoogleLogin)).to.have.length(1);
+  });
+
+  describe('Increment', () => {
+    it('renders an increment button', () => {
+      expect(wrapper.find('button').text()).to.equal('Increment');
+    });
+
+    it('increments the count on click', () => {
+      expect(wrapper.find('.count').text()).to.equal('0');
+      wrapper.find('button').simulate('click');
+      expect(wrapper.find('.count').text()).to.equal('1');
+    });
   });
 });
