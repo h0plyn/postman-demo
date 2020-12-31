@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 // GET /api/users
 router.get('/', (req, res, next) => {
-  res.send("You've reached Users!");
+  res.json("You've reached Users!");
 });
 
 // POST /api/users
