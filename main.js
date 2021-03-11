@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV === 'development') {
-  require('./secret');
-}
-
 const { db } = require('./server/db');
 const app = require('./server');
 const PORT = process.env.PORT || 1337;

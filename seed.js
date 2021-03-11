@@ -23,16 +23,24 @@ const products = [
 const brands = [
   {
     name: 'Apple',
+    location: 'Cupertino, CA',
+    category: 'Technology',
   },
 
   {
     name: 'Orvis',
+    location: 'Manchester, Vermont',
+    category: 'Recreation',
   },
   {
     name: 'Herman Miller',
+    location: 'Zeeland, Michigan',
+    category: 'Home Goods',
   },
   {
     name: 'Blue Bottle',
+    location: 'San Francisco, CA',
+    category: 'Coffee',
   },
 ];
 
@@ -62,7 +70,7 @@ const users = [
 
 const seed = async () => {
   try {
-    await db.sync();
+    await db.sync({ force: true });
 
     await Promise.all(
       products.map((product) => {
