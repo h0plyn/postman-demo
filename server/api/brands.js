@@ -15,9 +15,9 @@ router.get('/', async (req, res, next) => {
 
 // POST /api/brands
 router.post('/', async (req, res, next) => {
-  const { name } = req.body;
+  const { name, location, category } = req.body;
   try {
-    const brands = await Brand.create({ name });
+    const brands = await Brand.create({ name, location, category });
     res.json(brands);
   } catch (err) {
     next(err);
@@ -38,10 +38,10 @@ router.get('/:brandId', async (req, res, next) => {
 // PUT /api/brands/:brandId
 router.put('/:brandId', async (req, res, next) => {
   const { brandId } = req.params;
-  const { name } = req.body;
+
   try {
     const brand = await Brand.findByPk(brandId);
-    const updatedBrand = await brand.update({ name });
+    const updatedBrand = await brand.update(req.body);
     res.json(updatedBrand);
   } catch (err) {
     next(err);
@@ -52,8 +52,8 @@ router.put('/:brandId', async (req, res, next) => {
 router.delete('/:brandId', async (req, res, next) => {
   const { brandId } = req.params;
   try {
-    let toBeDeleted = await Brand.findByPk(brandId);
-    await toBeDeleted.destroy();
+    let deleteBrand = await Brand.findByPk(brandId);
+    await deleteBrand.destroy();
     res.sendStatus(204);
   } catch (error) {
     next(error);
