@@ -27,19 +27,20 @@ localhost:1337/api/brands
 localhost:1337/api/brands/1
 ```
 
-> // PUT /api/brands/:brandId
+> // PUT /api/brands/:brandId - Update a Brand
 
 ```
 localhost:1337/api/brands/1
 ```
 
-> // DELETE /api/brands/:brandId
+> // DELETE /api/brands/:brandId - Delete a Brand
 
 ```
 localhost:1337/api/brands/1
 ```
 
 ### JSON Shape
+
 - Can be added to the Brands table
 
 ```
