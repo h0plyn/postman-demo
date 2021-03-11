@@ -3,8 +3,24 @@ import React, { useState } from 'react';
 const Home = (props) => {
   return (
     <div>
-      <h1>Postman Demo</h1>
-      <h2>This is a backend demo! Close the browser :D </h2>
+      <div>
+        <h1>Postman Demo</h1>
+        <h2>This is a backend demo! Close the browser :D </h2>
+      </div>
+      <div>
+        <form action="/api/users" method="POST">
+          <label for="fname">Name:</label>
+          <input type="text" id="name" name="name" />
+          <br />
+          <label for="fname">E-mail:</label>
+          <input type="text" id="email" name="email" />
+          <br />
+          <label for="fname">Password:</label>
+          <input type="password" id="password" name="password" />
+          <br />
+          <input type="submit" value="Submit"></input>
+        </form>
+      </div>
     </div>
   );
 };
