@@ -2,10 +2,9 @@
 
 1. `git clone` && `cd postman-demo`
 2. `createdb postman-demo`
-3. `node seed.js`
-4. `npm i`
-5. `npm run start` to spin up the server && seed database
-6. Demo routes via `http://localhost:1337/api/brands`
+3. `npm i`
+4. `npm run start` to spin up the server && seed database
+5. Demo routes via `http://localhost:1337/api/brands`
 
 ## Available Routes
 
