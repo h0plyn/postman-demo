@@ -50,3 +50,7 @@ localhost:1337/api/brands/1
     "category": "Clothing"
 }
 ```
+
+### Note:
+
+- There are also endpoints for `/users` and `/products/`. Feel free to copy the logic from `/brands` and build our `seed.js` with your own data.
