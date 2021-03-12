@@ -16,6 +16,7 @@ router.get('/', async (req, res, next) => {
 // POST /api/brands
 router.post('/', async (req, res, next) => {
   const { name, location, category } = req.body;
+  console.log(typeof name);
   try {
     const brands = await Brand.create({ name, location, category });
     res.json(brands);

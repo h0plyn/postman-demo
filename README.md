@@ -52,4 +52,4 @@ localhost:1337/api/brands/1
 
 ### Note:
 
-- There are also endpoints for `/users` and `/products/`. Feel free to copy the logic from `/brands` and build our `seed.js` with your own data.
+- There are also endpoints for `/users` and `/products`. Feel free to copy the logic from `/brands` and build out `seed.js` with your own data.
