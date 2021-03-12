@@ -11,14 +11,13 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Home */ "./client/components/Home.js");
 /* harmony import */ var _components_NotFound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/NotFound */ "./client/components/NotFound.js");
-/* harmony import */ var _components_UserPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/UserPage */ "./client/components/UserPage.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./store */ "./client/store.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.css */ "./client/style.css");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store */ "./client/store.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.css */ "./client/style.css");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,7 +49,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
 var Main = /*#__PURE__*/function (_Component) {
   _inherits(Main, _Component);
 
@@ -65,15 +63,11 @@ var Main = /*#__PURE__*/function (_Component) {
   _createClass(Main, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
         exact: true,
         to: "/",
         component: _components_Home__WEBPACK_IMPORTED_MODULE_2__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
-        exact: true,
-        to: "/profile",
-        component: _components_UserPage__WEBPACK_IMPORTED_MODULE_4__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
         exact: true,
         to: "/notfound",
         component: _components_NotFound__WEBPACK_IMPORTED_MODULE_3__.default
@@ -84,8 +78,8 @@ var Main = /*#__PURE__*/function (_Component) {
   return Main;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-react_dom__WEBPACK_IMPORTED_MODULE_5__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__.Provider, {
-  store: _store__WEBPACK_IMPORTED_MODULE_6__.default
+react_dom__WEBPACK_IMPORTED_MODULE_4__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__.Provider, {
+  store: _store__WEBPACK_IMPORTED_MODULE_5__.default
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Main, null)), document.getElementById('app'));
 
 /***/ }),
@@ -105,7 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Postman Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "This is a backend demo! Close the browser :D ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Postman Demo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Create Account"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     action: "/api/users",
     method: "POST"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
@@ -158,28 +152,6 @@ var NotFound = function NotFound(props) {
 
 /***/ }),
 
-/***/ "./client/components/UserPage.js":
-/*!***************************************!*\
-  !*** ./client/components/UserPage.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var UserPage = function UserPage(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Logged In User Homepage");
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserPage);
-
-/***/ }),
-
 /***/ "./client/redux/index.js":
 /*!*******************************!*\
   !*** ./client/redux/index.js ***!
@@ -215,7 +187,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => /* binding */ productsReducer
 /* harmony export */ });
 var GET_PRODUCTS = 'GET_PRODUCTS';
-var getProducts = function getProducts(dogs) {
+var getProducts = function getProducts(products) {
   return {
     type: GET_PRODUCTS,
     products: products

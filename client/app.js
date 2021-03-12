@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
-import UserPage from './components/UserPage';
 import ReactDOM from 'react-dom';
 import store from './store';
 import './style.css';
@@ -17,7 +16,6 @@ class Main extends Component {
       <Router>
         <Switch>
           <Route exact to="/" component={Home} />
-          <Route exact to="/profile" component={UserPage} />
           <Route exact to="/notfound" component={NotFound} />
         </Switch>
       </Router>

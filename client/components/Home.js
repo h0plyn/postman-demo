@@ -5,9 +5,9 @@ const Home = (props) => {
     <div>
       <div>
         <h1>Postman Demo</h1>
-        <h2>This is a backend demo! Close the browser :D </h2>
       </div>
       <div>
+        <h2>Create Account</h2>
         <form action="/api/users" method="POST">
           <label for="fname">Name:</label>
           <input type="text" id="name" name="name" />

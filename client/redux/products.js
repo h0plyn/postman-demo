@@ -1,6 +1,6 @@
 const GET_PRODUCTS = 'GET_PRODUCTS';
 
-export const getProducts = (dogs) => ({ type: GET_PRODUCTS, products });
+export const getProducts = (products) => ({ type: GET_PRODUCTS, products });
 
 export default function productsReducer(state = {}, action) {
   switch (action.type) {

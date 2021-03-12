@@ -2,12 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const apiRoutes = require('./api');
-const passport = require('passport');
 const volleyball = require('volleyball');
 app.use(volleyball);
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, '../public')));
 
